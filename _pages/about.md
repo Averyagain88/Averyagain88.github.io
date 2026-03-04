@@ -2,17 +2,17 @@
 layout: about
 title: About
 permalink: /
-subtitle: 
-news: false  # includes a list of news items
-latest_posts: false # includes a list of the newest posts
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+subtitle:
+profile: false
+news: false
+latest_posts: false
+selected_papers: false
+social: true
 ---
 
 
 <div class="hero-wrap">
   <div class="hero-card">
-
     <div class="hero-left">
       <img class="hero-avatar" src="{{ '/assets/img/avatar.jpeg' | relative_url }}" alt="Avery Zhou">
     </div>
@@ -27,6 +27,5 @@ social: true  # includes social icons at the bottom of the page
         <a class="hero-icon" href="{{ '/assets/pdf/CV.pdf' | relative_url }}">CV</a>
       </div>
     </div>
-
   </div>
 </div>
