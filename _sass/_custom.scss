@@ -160,3 +160,82 @@ body { border-top: 8px solid red !important; }
   background: rgba(0,0,0,.06);
   margin-top: 12px;
 }
+
+
+exp渲染
+/* Experience page */
+.exp-page{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.exp-section-title{
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-weight: 900;
+  font-size: 12px;
+  opacity: .7;
+  margin: 26px 0 14px;
+}
+
+.exp-section-gap{ margin-top: 36px; }
+
+.exp-block{
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  padding: 18px 18px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.08);
+  margin-bottom: 14px;
+}
+
+.exp-head{
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 6px 14px;
+  align-items: start;
+}
+
+.exp-when{
+  font-weight: 900;
+  font-size: 13px;
+  opacity: .85;
+}
+
+.exp-what{
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.exp-where{
+  grid-column: 2 / -1;
+  font-size: 13px;
+  opacity: .78;
+}
+
+.exp-subrole{
+  margin-top: 12px;
+  font-weight: 900;
+  font-size: 13px;
+  opacity: .85;
+}
+
+.exp-bullets{
+  margin: 12px 0 0;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.exp-bullets li{ margin: 6px 0; }
+
+.exp-note{
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: .72;
+}
+
+@media (max-width: 720px){
+  .exp-head{ grid-template-columns: 1fr; }
+  .exp-where{ grid-column: auto; }
+}
