@@ -4,7 +4,6 @@ title: Visual Design
 description: Visual assets and layout design samples.
 img: assets/img/projects/maydolly/009.png
 importance: 4
-category: fun
 ---
 
 <div class="row">
