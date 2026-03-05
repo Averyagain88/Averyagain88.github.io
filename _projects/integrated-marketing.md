@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Integrated Marketing (Campaign Proposals)
-description: Two planning cases: Mengniu & JOOX.
-img: assets/img/projects/maydolly/004.png
+description: "Two planning cases: Mengniu & JOOX."
+img: /assets/img/projects/maydolly/004.png
 importance: 2
 ---
 
