@@ -239,3 +239,50 @@ exp渲染
   .exp-head{ grid-template-columns: 1fr; }
   .exp-where{ grid-column: auto; }
 }
+
+/* ===== CN page: title line + clear float + avatar offset ===== */
+.cn-page { max-width: 1100px; margin: 0 auto; }
+
+.cn-hero { margin: 6px 0 18px; }
+
+.cn-titleline{
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.cn-name{
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+
+.cn-slogan{
+  font-style: italic;
+  font-size: 0.5em;   /* 再小一点：你想“缩小一些” */
+  font-weight: 500;
+  opacity: .78;
+}
+
+/* 把 PDF 图标放到右侧，不再用 float-right（避免叠加绕排） */
+.cn-cv{
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,.08);
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+}
+.cn-cv:hover{ transform: translateY(-1px); transition: .12s ease; }
+
+/* ✅ 重点：正文不要钻到头像下面 */
+.cn-clear{ clear: both; }
+
+/* 头像整体下调一点（主题通常会用 .profile.float-right 或类似类名） */
+.profile.float-right{ margin-top: 18px; }
