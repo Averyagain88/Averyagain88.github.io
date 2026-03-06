@@ -240,15 +240,46 @@ exp渲染
   .exp-where{ grid-column: auto; }
 }
 
-/* ===== CN page: title line + clear float + avatar offset ===== */
-.cn-page { max-width: 1100px; margin: 0 auto; }
+/* ===== Chinese page layout ===== */
+.cn-page{
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-.cn-hero { margin: 6px 0 18px; }
+.cn-top{
+  display: grid;
+  grid-template-columns: 1.55fr 0.75fr;
+  gap: 42px;
+  align-items: start;
+  margin-top: 18px;
+  margin-bottom: 42px;
+}
 
+.cn-left{
+  min-width: 0;
+}
+
+.cn-right{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 34px;   /* 头像整体下调一点 */
+}
+
+.cn-avatar{
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 14px 30px rgba(0,0,0,.10);
+}
+
+/* 标题这一行：名字 + 简历图标 */
 .cn-titleline{
   margin: 0;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 14px;
   flex-wrap: wrap;
 }
@@ -256,33 +287,90 @@ exp渲染
 .cn-name{
   font-weight: 900;
   letter-spacing: -0.3px;
+  margin: 0;
 }
 
-.cn-slogan{
-  font-style: italic;
-  font-size: 0.5em;   /* 再小一点：你想“缩小一些” */
-  font-weight: 500;
-  opacity: .78;
-}
-
-/* 把 PDF 图标放到右侧，不再用 float-right（避免叠加绕排） */
 .cn-cv{
-  margin-left: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 34px;      /* 缩小图标按钮 */
+  height: 34px;
+  border-radius: 10px;
   text-decoration: none;
   border: 1px solid rgba(0,0,0,.08);
   background: rgba(255,255,255,.92);
-  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
 }
-.cn-cv:hover{ transform: translateY(-1px); transition: .12s ease; }
 
-/* ✅ 重点：正文不要钻到头像下面 */
-.cn-clear{ clear: both; }
+.cn-cv i{
+  font-size: 16px;   /* 图标更小 */
+}
 
-/* 头像整体下调一点（主题通常会用 .profile.float-right 或类似类名） */
-.profile.float-right{ margin-top: 18px; }
+.cn-cv:hover{
+  transform: translateY(-1px);
+  transition: .12s ease;
+}
+
+/* slogan 单独一行，放在名字下面 */
+.cn-slogan{
+  margin: 14px 0 20px;
+  font-style: italic;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.7;
+  opacity: .82;
+}
+
+/* 正文 */
+.cn-block{
+  margin: 40px 0;
+}
+
+.cn-body p{
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.95;
+  color: #2b2b2b;
+}
+
+/* 小标题 */
+.cn-block h2{
+  margin: 0 0 16px;
+  font-weight: 900;
+  letter-spacing: .04em;
+}
+
+/* 列表 */
+.cn-block ul{
+  margin: 0;
+  padding-left: 22px;
+}
+
+.cn-block li{
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #2b2b2b;
+}
+
+@media (max-width: 900px){
+  .cn-top{
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cn-right{
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .cn-avatar{
+    width: 220px;
+    height: 220px;
+  }
+
+  .cn-slogan{
+    font-size: 17px;
+  }
+}
