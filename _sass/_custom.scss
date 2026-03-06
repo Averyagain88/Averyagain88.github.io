@@ -1,27 +1,26 @@
-body { border-top: 8px solid red !important; }
 .hero-wrap{
-  padding: 56px 18px;
+  padding: 34px 18px;
   background: linear-gradient(135deg, #eef2f7, #dbe6f6);
   border-radius: 22px;
 }
 
 .hero-card{
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
-  gap: 26px;
+  gap: 22px;
   align-items: center;
 
   background: rgba(255,255,255,.90);
   border: 1px solid rgba(0,0,0,.06);
   border-radius: 22px;
-  padding: 28px 30px;
-  box-shadow: 0 22px 60px rgba(0,0,0,.10);
+  padding: 22px 24px;
+  box-shadow: 0 18px 42px rgba(0,0,0,.08);
 }
 
 .hero-avatar{
-  width: 132px;
-  height: 132px;
+  width: 118px;
+  height: 118px;
   border-radius: 999px;
   object-fit: cover;
   display: block;
@@ -29,12 +28,11 @@ body { border-top: 8px solid red !important; }
 }
 
 .hero-hi{
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 850;
   letter-spacing: -0.3px;
   line-height: 1.15;
 }
-
 .hero-meta{
   margin-top: 10px;
   font-size: 16px;
@@ -73,18 +71,21 @@ body { border-top: 8px solid red !important; }
 
 .home-grid{
   max-width: 1100px;
-  margin: 22px auto 0;
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 18px;
-  padding: 0 18px 12px;
+  margin: 26px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 0 18px;
+  align-items: start;
 }
+
 .home-card{
   background: rgba(255,255,255,.92);
   border: 1px solid rgba(0,0,0,.06);
   border-radius: 18px;
-  padding: 18px 18px;
+  padding: 22px 22px;
   box-shadow: 0 14px 34px rgba(0,0,0,.08);
+  position: relative;
 }
 
 .home-card .home-title{
@@ -103,11 +104,11 @@ body { border-top: 8px solid red !important; }
 .exp-list{
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .exp-item{
-  padding: 12px 12px;
+  padding: 14px 14px;
   border-radius: 14px;
   background: rgba(240,244,250,.65);
   border: 1px solid rgba(0,0,0,.04);
@@ -115,9 +116,8 @@ body { border-top: 8px solid red !important; }
 
 .exp-line{
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .exp-date{
@@ -139,10 +139,16 @@ body { border-top: 8px solid red !important; }
 
 .home-bullets{
   margin: 0;
-  padding-left: 18px;
+  padding-left: 20px;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.45;
   opacity: .9;
+  text-align: left;
+}
+
+.home-bullets li{
+  margin: 6px 0;
+  text-align: left;
 }
 
 @media (max-width: 860px){
