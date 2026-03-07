@@ -1,11 +1,11 @@
 .hero-wrap{
-  padding: 34px 18px;
+  padding: 20px 18px; /* 原 34px 18px → 减小顶部 padding，让板块更紧凑 */
   background: linear-gradient(135deg, #eef2f7, #dbe6f6);
   border-radius: 22px;
 }
 
 .hero-card{
-  max-width: 900px;
+  max-width: 800px;   /* 原 900px → 缩小整体宽度，避免太宽 */
   margin: 0 auto;
   display: flex;
   gap: 22px;
@@ -14,13 +14,13 @@
   background: rgba(255,255,255,.90);
   border: 1px solid rgba(0,0,0,.06);
   border-radius: 22px;
-  padding: 22px 24px;
+  padding: 16px 20px; /* 原 22px 24px → 减小内部 padding */
   box-shadow: 0 18px 42px rgba(0,0,0,.08);
 }
 
 .hero-avatar{
-  width: 118px;
-  height: 118px;
+  width: 100px;       /* 原 118px → 缩小头像尺寸 */
+  height: 100px;      /* 原 118px */
   border-radius: 999px;
   object-fit: cover;
   display: block;
@@ -34,13 +34,13 @@
   line-height: 1.15;
 }
 .hero-meta{
-  margin-top: 10px;
+  margin-top: 8px;    /* 原 10px → 拉近两行 meta 文字的距离 */
   font-size: 16px;
   opacity: .88;
 }
 
 .hero-icons{
-  margin-top: 16px;
+  margin-top: 12px;   /* 原 16px → 拉近和上方 meta 的距离 */
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -71,12 +71,17 @@
 
 .home-grid{
   max-width: 1100px;
-  margin: 26px auto 0;
+  margin: 20px auto 0; /* 原 26px → 拉近和上方 hero 板块的距离 */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* 保持两栏并排 */
   gap: 22px;
   padding: 0 18px;
   align-items: start;
+}
+
+/* 把竖排触发的断点从 860px 改到 768px，让更多屏幕保持并排 */
+@media (max-width: 768px){
+  .home-grid{ grid-template-columns: 1fr; }
 }
 
 .home-card{
@@ -93,22 +98,22 @@
   letter-spacing: .12em;
   font-weight: 900;
   font-size: 12px;
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
   opacity: .75;
 }
 
 .home-title-gap{
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .exp-list{
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .exp-item{
-  padding: 14px 14px;
+  padding: 10px 12px;
   border-radius: 14px;
   background: rgba(240,244,250,.65);
   border: 1px solid rgba(0,0,0,.04);
@@ -132,7 +137,7 @@
 }
 
 .exp-org{
-  margin-top: 6px;
+  margin-top: 4px;
   font-size: 13px;
   opacity: .78;
 }
@@ -147,7 +152,7 @@
 }
 
 .home-bullets li{
-  margin: 6px 0;
+  margin: 4px 0;
   text-align: left;
 }
 
@@ -158,15 +163,6 @@
 .home-card{
   position: relative;
 }
-
-.home-card::after{
-  content: "";
-  display: block;
-  height: 1px;
-  background: rgba(0,0,0,.06);
-  margin-top: 12px;
-}
-
 
 exp渲染
 /* Experience page */
@@ -245,7 +241,6 @@ exp渲染
   .exp-head{ grid-template-columns: 1fr; }
   .exp-where{ grid-column: auto; }
 }
-
 /* ===== Chinese page layout ===== */
 .cn-page{
   max-width: 1100px;
