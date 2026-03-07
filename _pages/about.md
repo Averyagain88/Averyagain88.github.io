@@ -28,7 +28,7 @@ social: true
     </div>
   </div>
 </div>
-about：<div class="home-grid">
+<div class="home-grid">
   <!-- Left column -->
   <section class="home-card">
     <div class="home-title">Work &amp; Intern Experience</div>
