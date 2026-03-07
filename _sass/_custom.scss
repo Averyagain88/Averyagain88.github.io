@@ -1,26 +1,33 @@
+/* =========================
+   ABOUT PAGE
+========================= */
+
 .hero-wrap{
-  padding: 20px 18px; /* 原 34px 18px → 减小顶部 padding，让板块更紧凑 */
+  padding: 36px 18px;
   background: linear-gradient(135deg, #eef2f7, #dbe6f6);
-  border-radius: 22px;
+  border-radius: 20px;
 }
 
 .hero-card{
-  max-width: 800px;   /* 原 900px → 缩小整体宽度，避免太宽 */
+  max-width: 980px;
   margin: 0 auto;
   display: flex;
   gap: 22px;
   align-items: center;
 
-  background: rgba(255,255,255,.90);
+  background: rgba(255,255,255,.92);
   border: 1px solid rgba(0,0,0,.06);
-  border-radius: 22px;
-  padding: 16px 20px; /* 原 22px 24px → 减小内部 padding */
-  box-shadow: 0 18px 42px rgba(0,0,0,.08);
+  border-radius: 18px;
+  padding: 22px 26px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.10);
 }
 
+.hero-left{ flex: 0 0 auto; }
+.hero-right{ flex: 1 1 auto; min-width: 0; }
+
 .hero-avatar{
-  width: 100px;       /* 原 118px → 缩小头像尺寸 */
-  height: 100px;      /* 原 118px */
+  width: 120px;
+  height: 120px;
   border-radius: 999px;
   object-fit: cover;
   display: block;
@@ -28,36 +35,43 @@
 }
 
 .hero-hi{
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 850;
-  letter-spacing: -0.3px;
-  line-height: 1.15;
+  letter-spacing: -0.4px;
+  line-height: 1.1;
+  margin: 0;
 }
+
 .hero-meta{
-  margin-top: 8px;    /* 原 10px → 拉近两行 meta 文字的距离 */
+  margin-top: 8px;
   font-size: 16px;
-  opacity: .88;
+  opacity: .86;
+}
+
+.hero-tags{
+  margin-top: 10px;
+  font-size: 15px;
+  opacity: .9;
 }
 
 .hero-icons{
-  margin-top: 12px;   /* 原 16px → 拉近和上方 meta 的距离 */
+  margin-top: 14px;
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .hero-icon{
-  width: 44px;
-  height: 44px;
+  padding: 10px 12px;
   border-radius: 999px;
-  background: rgba(255,255,255,.95);
+  background: rgba(255,255,255,.96);
   border: 1px solid rgba(0,0,0,.06);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   font-weight: 800;
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
 }
 
 .hero-icon:hover{
@@ -69,6 +83,9 @@
   .hero-card{ flex-direction: column; text-align: center; }
 }
 
+/* =========================
+   ABOUT LOWER TWO COLUMNS
+========================= */
 .home-grid{
   max-width: 1100px;
   margin: 20px auto 0; /* 原 26px → 拉近和上方 hero 板块的距离 */
